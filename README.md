@@ -1,3 +1,5 @@
+<img src="/assets/logo/logo.png" height="100px" />
+
 # [pixel.build](https://pixel.build)
 
 > Open-source prop design studio building bespoke premium gaming replicas. 📐🤝
