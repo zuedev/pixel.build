@@ -8,24 +8,140 @@
       name="description"
       content="Open-source prop design studio building bespoke premium gaming replicas. 📐🤝"
     />
+    <link rel="shortcut icon" href="./logo.png" type="image/png" />
     <style>
+      @import url("https://use.typekit.net/sce8ohu.css");
+
+      html {
+        font-family: "t26-carbon";
+      }
+
+      /* hide scrollbar */
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
       body {
-        font-family: monospace;
-        font-size: 5vw;
-        text-align: justify;
+        margin: 0 auto;
+        max-width: 666px;
+        min-height: 100vh;
+      }
+
+      /* add margin if below 666px wide */
+      @media (max-width: 750px) {
+        body {
+          margin: 0 4em;
+        }
+      }
+
+      header {
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      header span {
+        background-color: yellow;
+        padding: 0.25em 0.5em;
+      }
+
+      nav {
+        margin: 2rem 0;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin: 0 1em;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        font-size: 2em;
+      }
+
+      main {
+        border: 2px solid black;
+        border-bottom: 0;
         padding: 2rem;
+        min-height: 100vh;
+      }
+
+      main img#logo {
+        display: block;
+        margin: 0 auto;
+        height: 100px;
+      }
+
+      main h1 {
+        font-size: 4em;
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      main p {
+        font-size: 1.5em;
+        text-align: justify;
+      }
+
+      main a {
+        text-decoration: none;
+        color: blue;
+      }
+
+      main > *:last-child {
+        margin-bottom: 0;
       }
     </style>
   </head>
   <body>
-    <p style="margin-top: 0">
-      <b>pixel.build</b> is a prop design studio building bespoke premium gaming
-      replicas. 📐🤝
-    </p>
-    <p>
-      We're currently working on our website. Please check back later or
-      star/watch our
-      <a href="https://github.com/zuedev/pixel.build">GitHub</a> for updates.
-    </p>
+    <header>
+      <span>v0.1.0</span>
+      <nav style="display: none">
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <img id="logo" src="./logo.png" alt="pixel.build Logo" />
+      <h1>pixel.build</h1>
+      <p>
+        <b>pixel.build</b> is a prop design studio building bespoke premium
+        gaming replicas. 📐🤝
+      </p>
+      <p>
+        We're currently working on our website. Please check back later or
+        star/watch our
+        <a href="https://github.com/zuedev/pixel.build">GitHub</a> for updates.
+      </p>
+    </main>
+    <footer></footer>
   </body>
+  <script type="module">
+    // get twemoji
+    import twemoji from "https://cdn.skypack.dev/twemoji";
+
+    // on load
+    document.addEventListener("DOMContentLoaded", () => {
+      // convert emojis in body
+      twemoji.parse(document.body, {
+        base: "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/",
+        folder: "svg",
+        ext: ".svg",
+      });
+
+      // apply styles to fix twemoji size
+      document.querySelectorAll("img.emoji").forEach((emoji) => {
+        emoji.style.width = "1rem";
+        emoji.style.height = "1rem";
+      });
+    });
+  </script>
 </html>
