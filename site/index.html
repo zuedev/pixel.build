@@ -26,6 +26,26 @@
         max-width: 666px;
         min-height: 100vh;
         opacity: 0;
+
+        animation: background-animation 15s ease infinite;
+      }
+
+      @keyframes background-animation {
+        0% {
+          background-color: #ff0000;
+        }
+        25% {
+          background-color: #00ff00;
+        }
+        50% {
+          background-color: #0000ff;
+        }
+        75% {
+          background-color: #00ff00;
+        }
+        100% {
+          background-color: #ff0000;
+        }
       }
 
       /* add margin if below 666px wide */
@@ -70,6 +90,7 @@
         border-bottom: 0;
         padding: 2rem;
         min-height: 100vh;
+        background: white;
       }
 
       main img#logo {
