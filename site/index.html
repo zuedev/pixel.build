@@ -25,6 +25,7 @@
         margin: 0 auto;
         max-width: 666px;
         min-height: 100vh;
+        opacity: 0;
       }
 
       /* add margin if below 666px wide */
@@ -124,9 +125,16 @@
     </main>
     <footer></footer>
   </body>
+  <script nomodule>
+    alert(
+      "This website is best viewed in a modern browser. Please consider upgrading to a modern browser like Chrome, Firefox, or Edge."
+    );
+  </script>
   <script type="module">
     // get twemoji
     import twemoji from "https://cdn.skypack.dev/twemoji";
+    // get animejs
+    import anime from "https://cdn.skypack.dev/animejs";
 
     // on load
     document.addEventListener("DOMContentLoaded", () => {
@@ -141,6 +149,14 @@
       document.querySelectorAll("img.emoji").forEach((emoji) => {
         emoji.style.width = "1rem";
         emoji.style.height = "1rem";
+      });
+
+      // fade in body
+      anime({
+        targets: "body",
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 1000,
       });
     });
   </script>
