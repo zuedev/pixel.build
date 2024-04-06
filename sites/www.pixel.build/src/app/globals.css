@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: monospace;
+  background: black;
+  color: white;
+}
+
+/* hide scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
