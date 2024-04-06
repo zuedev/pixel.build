@@ -6,7 +6,7 @@
     <title>pixel.build</title>
     <meta
       name="description"
-      content="Open-source prop design studio building bespoke premium gaming replicas. 📐🤝"
+      content="Hey there, we're pixel.build – your one-stop shop for bringing awesome props to life. Whether you need a quick 3D print or a crazy, custom-made piece that'll blow minds, we're here to turn your ideas into reality, one pixel at a time."
     />
     <link rel="shortcut icon" href="./logo.png" type="image/png" />
     <style>
@@ -14,6 +14,12 @@
 
       html {
         font-family: "t26-carbon";
+        background: black;
+        color: white;
+      }
+
+      body {
+        margin: 0;
       }
 
       /* hide scrollbar */
@@ -21,16 +27,42 @@
         display: none;
       }
 
-      body {
-        margin: 0 auto;
-        max-width: 666px;
-        min-height: 100vh;
-        opacity: 0;
-
-        animation: background-animation 15s ease infinite;
+      video {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
       }
 
-      @keyframes background-animation {
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: justify;
+        font-size: 2rem;
+        padding: 1rem;
+      }
+
+      #logo {
+        height: 100px;
+      }
+
+      #version {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 1rem;
+        font-weight: 900;
+      }
+
+      @keyframes rgb-animation {
         0% {
           background-color: #f00;
         }
@@ -48,114 +80,36 @@
         }
       }
 
-      /* add margin if below 666px wide */
-      @media (max-width: 750px) {
-        body {
-          margin: 0 4em;
-        }
-      }
-
-      a {
-        color: #f0f;
-        text-decoration: none;
-      }
-
-      header {
-        text-align: center;
-        margin: 1rem 0;
-      }
-
-      header span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 0.5rem;
-      }
-
-      nav ul {
-        display: flex;
-        justify-content: center;
-        list-style-type: none;
-        padding: 0;
-      }
-
-      nav ul li {
-        margin: 0 1rem;
-        background: #000;
-        padding: 0.25em 0.5em;
-      }
-
-      nav ul li a {
-        text-decoration: none;
-        color: #fff;
-      }
-
-      main {
-        border: 2px solid black;
-        border-bottom: 0;
-        padding: 2rem;
-        min-height: 100vh;
-        background: white;
-      }
-
-      main img#logo {
-        display: block;
-        margin: 0 auto;
-        height: 100px;
-      }
-
-      main h1 {
-        font-size: 4rem;
-        text-align: center;
-        margin: 2rem 0;
-      }
-
-      main p {
-        font-size: 1.5em;
-        text-align: justify;
-      }
-
-      main > *:last-child {
-        margin-bottom: 0;
-      }
-
-      footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        padding: 0.25rem 0;
-        background: #000;
-        color: #fff;
+      .pixelbuild {
+        background: linear-gradient(
+          45deg,
+          #f00 33%,
+          #0f0 33%,
+          #0f0 66%,
+          #00f 66%
+        );
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
       }
     </style>
   </head>
   <body>
-    <header>
-      <span>v0.1.0</span>
-      <nav style="visibility: hidden">
-        <ul>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Store</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+      <source src="./background.mp4" type="video/mp4" />
+    </video>
+
     <main>
       <img id="logo" src="./logo.png" alt="pixel.build Logo" />
-      <h1>pixel.build</h1>
       <p>
-        <b>pixel.build</b> is a prop design studio building bespoke premium
-        gaming replicas. 📐🤝
-      </p>
-      <p>
-        We're currently working on our website. Please check back later or
-        star/watch our
-        <a href="https://github.com/zuedev/pixel.build">GitHub</a> for updates.
+        Hey there, we're <span class="pixelbuild">pixel.build</span>! Your
+        one-stop shop for bringing awesome props to life. Whether you need a
+        quick 3D print or a crazy, custom-made piece that'll blow minds, we're
+        here to turn your ideas into reality, one pixel at a time.
       </p>
     </main>
-    <footer>A project by <a href="https://zue.dev">zuedev</a></footer>
+
+    <span id="version">v0.1.0</span>
   </body>
   <script nomodule>
     alert(
@@ -167,6 +121,8 @@
     import twemoji from "https://cdn.skypack.dev/twemoji";
     // get animejs
     import anime from "https://cdn.skypack.dev/animejs";
+    // get darkreader
+    import DarkReader from "https://cdn.skypack.dev/darkreader";
 
     // on load
     document.addEventListener("DOMContentLoaded", () => {
@@ -184,6 +140,13 @@
         emoji.style.margin = "0 .05em 0 .1em";
         emoji.style.verticalAlign = "-0.1em";
       });
+
+      // apply dark mode
+      // DarkReader.auto({
+      //   brightness: 100,
+      //   contrast: 200,
+      //   sepia: 0,
+      // });
 
       // fade in body
       anime({
