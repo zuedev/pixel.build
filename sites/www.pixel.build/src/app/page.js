@@ -1,18 +1,18 @@
 import "./page.css";
 
 const links = [
-  {
-    name: "About",
-    href: "#",
-  },
-  {
-    name: "Capabilities",
-    href: "#",
-  },
-  {
-    name: "Contact",
-    href: "#",
-  },
+  // {
+  //   name: "About",
+  //   href: "#",
+  // },
+  // {
+  //   name: "Capabilities",
+  //   href: "#",
+  // },
+  // {
+  //   name: "Contact",
+  //   href: "#",
+  // },
 ];
 
 const socials = [
@@ -35,7 +35,7 @@ export default function Home() {
         <source src="/background.mp4" type="video/mp4" />
       </video>
 
-      <main>
+      <main className="space-y-4">
         <img id="logo" src="/logo.png" alt="pixel.build Logo" />
         <div id="links">
           {links.map((link) => (
@@ -44,7 +44,7 @@ export default function Home() {
             </a>
           ))}
         </div>
-        <div id="socials">
+        <div id="socials" className="space-x-4">
           {socials.map((social) => (
             <a key={social.name} href={social.href}>
               <img src={social.imgSrc} alt={social.name} />

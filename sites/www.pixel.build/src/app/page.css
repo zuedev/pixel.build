@@ -18,10 +18,6 @@ main {
   margin: 0 auto;
 }
 
-#links {
-  margin-bottom: 1rem 0;
-}
-
 #links a {
   display: block;
   background: white;
@@ -43,7 +39,6 @@ main {
 
 #socials a {
   text-decoration: none;
-  margin: 0.5rem;
 }
 
 #socials a img {
