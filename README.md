@@ -2,7 +2,7 @@
 
 # [pixel.build](https://pixel.build)
 
-> Open-source prop design studio building bespoke premium gaming replicas. 📐🤝
+> Open-source prop design studio by zuedev that specializes in building bespoke parts and premium gaming replicas.
 
 ## License
 
