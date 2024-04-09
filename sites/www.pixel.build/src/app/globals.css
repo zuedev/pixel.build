@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  font-family: monospace;
+  font-family: "t26-carbon";
   background: black;
   color: white;
 }
