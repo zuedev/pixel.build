@@ -6,19 +6,19 @@ const links = [
   {
     name: "About",
     href: "#",
-    classes: "cursor-not-allowed",
+    classes: "cursor-not-allowed line-through",
     title: "Coming soon...",
   },
   {
     name: "Capabilities",
     href: "#",
-    classes: "cursor-not-allowed",
+    classes: "cursor-not-allowed line-through",
     title: "Coming soon...",
   },
   {
     name: "Contact",
     href: "#",
-    classes: "cursor-not-allowed",
+    classes: "cursor-not-allowed line-through",
     title: "Coming soon...",
   },
 ];
