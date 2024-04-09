@@ -33,7 +33,7 @@ export default function Home() {
       <p>
         In the meantime, feel free to shoot us an email via{" "}
         <a href="mailto:hello@pixel.build">hello@pixel.build</a> if you have any
-        questions or inquiries. Otherwise, check out our socials below!
+        questions or inquiries.
       </p>
     </main>
   );
