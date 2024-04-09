@@ -1,58 +1,30 @@
-video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
+main a {
+  color: #f0f;
+  text-decoration: dashed underline;
+  text-decoration-color: #0ff;
+}
+
+main a:hover {
+  color: #0ff;
+  text-decoration-color: #f0f;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 666px;
+  backdrop-filter: blur(10px);
 }
 
-#links a {
-  display: block;
-  background: white;
-  color: black;
-  padding: 0.5rem 1rem;
-  min-width: 200px;
-  text-align: center;
-  margin: 2rem;
-  text-decoration: none;
-  font-weight: 900;
+@media (max-width: 720px) {
+  main {
+    max-width: 90%;
+  }
+}
+
+main p {
   font-size: 1.5rem;
 }
 
-#socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#socials a {
-  text-decoration: none;
-}
-
-#socials a img {
-  height: 3rem;
-}
-
-#logo {
-  height: 100px;
-}
-
-#version {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 1rem;
-  font-weight: 900;
+main p:first-of-type {
+  font-size: 3rem;
 }

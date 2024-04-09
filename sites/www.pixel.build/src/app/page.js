@@ -1,59 +1,40 @@
 import "./page.css";
 
-const links = [
-  // {
-  //   name: "About",
-  //   href: "#",
-  // },
-  // {
-  //   name: "Capabilities",
-  //   href: "#",
-  // },
-  // {
-  //   name: "Contact",
-  //   href: "#",
-  // },
-];
-
-const socials = [
-  {
-    name: "GitHub",
-    href: "https://github.com/zuedev/pixel.build",
-    imgSrc: "https://cdn.simpleicons.org/github/fff",
-  },
-  {
-    name: "Discord",
-    href: "https://discord.gg/k7VWbAKTCM",
-    imgSrc: "https://cdn.simpleicons.org/discord",
-  },
-];
-
 export default function Home() {
   return (
-    <>
-      <video playsInline autoPlay muted loop>
-        <source src="/background.mp4" type="video/mp4" />
-      </video>
+    <main
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        padding: "1rem",
+        textAlign: "justify",
+      }}
+      className="space-y-4"
+    >
+      <p>
+        Welcome to <b className="pixelbuild">PixelBuildOS</b>!
+      </p>
 
-      <main className="space-y-4">
-        <img id="logo" src="/logo.png" alt="pixel.build Logo" />
-        <div id="links">
-          {links.map((link) => (
-            <a key={link.name} href={link.href}>
-              {link.name}
-            </a>
-          ))}
-        </div>
-        <div id="socials" className="space-x-4">
-          {socials.map((social) => (
-            <a key={social.name} href={social.href}>
-              <img src={social.imgSrc} alt={social.name} />
-            </a>
-          ))}
-        </div>
-      </main>
+      <p>
+        This is a work-in-progress operating system built for pixel.build, an{" "}
+        <a href="https://github.com/zuedev/pixel.build">open-source</a> prop
+        design studio by <a href="https://zue.dev">zuedev</a> that specializes
+        in building bespoke parts and premium gaming replicas.
+      </p>
 
-      <span id="version">v0.2.1</span>
-    </>
+      <p>
+        The goal of this site is to provide a unique experience for users to
+        view and interact with the products and services we offer by providing a
+        virtual desktop environment that is both fun and functional to use.
+      </p>
+
+      <p>
+        In the meantime, feel free to shoot us an email via{" "}
+        <a href="mailto:hello@pixel.build">hello@pixel.build</a> if you have any
+        questions or inquiries. Otherwise, check out our socials below!
+      </p>
+    </main>
   );
 }

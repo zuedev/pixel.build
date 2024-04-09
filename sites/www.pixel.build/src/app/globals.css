@@ -8,7 +8,18 @@ html {
   color: white;
 }
 
+body {
+  height: 100vh;
+}
+
 /* hide scrollbar */
 body::-webkit-scrollbar {
   display: none;
+}
+
+.pixelbuild {
+  background: linear-gradient(45deg, #f00 33%, #0f0 33%, #0f0 66%, #00f 66%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
 }
